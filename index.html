@@ -1,31 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="refresh" content="5;url=https://intrepidtexan.com" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Site Moved</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 60px;
-    background-color: #ffffff;
-  }
-  h1 { font-size: 32px; }
-  p { font-size: 22px; margin-bottom: 20px; }
-  a { 
-    color: #0066cc; 
-    text-decoration: none; 
-    font-weight: bold; 
-    font-size: 22px;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <!-- Auto-redirect after 10 seconds -->
+  <meta http-equiv="refresh" content="10;url=https://intrepidtexan.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IntrepidTexan Has Moved</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      /* Shuttle background from your main repo */
+      background-image: url("https://raw.githubusercontent.com/IntrepidTexan/Intrepid001/main/IT02/147F16%20shuttle.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      /* Slight dark overlay handled by :before */
+      position: relative;
+      color: #ffffff;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55); /* darken for readability */
+      z-index: 0;
+    }
+
+    .center-container {
+      position: relative;
+      z-index: 1; /* above overlay */
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .message-box {
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.15); /* semi-transparent */
+      border-radius: 10px;
+      padding: 24px 32px;
+      backdrop-filter: blur(2px);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .url {
+      font-weight: bold;
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    a {
+      color: #ffd966;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .note {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 26px; }
+      p, .url { font-size: 18px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>This Website Has Moved</h1>
-  <p>The new permanent address is:</p>
-  <p><a href="https://intrepidtexan.com">https://intrepidtexan.com</a></p>
-  <p>You will be redirected automatically.</p>
+  <div class="center-container">
+    <div class="message-box">
+      <h1>This Website Has Moved</h1>
+      <p>The new permanent address is:</p>
+      <p class="url">
+        <a href="https://intrepidtexan.com">https://intrepidtexan.com</a>
+      </p>
+      <p class="note">
+        You will be redirected automatically in about 10 seconds.<br>
+        If nothing happens, click the link above to continue.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
